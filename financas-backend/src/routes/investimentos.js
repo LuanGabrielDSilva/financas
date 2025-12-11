@@ -15,7 +15,7 @@ router.get('/', verifyToken, async (req, res) => {
 });
 
 // Criar investimento
-router.post('/', verifyToken, async (req, res) => {
+router.post('/investimentos', verifyToken, async (req, res) => {
   const inv = new Investimento({ ...req.body, usuarioId: req.userId });
   try {
     const novo = await inv.save();

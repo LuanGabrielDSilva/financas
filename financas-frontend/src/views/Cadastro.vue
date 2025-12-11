@@ -22,7 +22,7 @@ export default {
     async cadastrarUsuario() {
       this.enviando = true;
       try {
-        const res = await fetch('http://localhost:5000/api/users/register', {
+        const res = await fetch('http://localhost:5000/api/auth/cadastro', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ nome: this.nome, email: this.email, senha: this.senha })
